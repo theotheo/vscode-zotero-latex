@@ -12,8 +12,8 @@ export function activate(context: vscode.ExtensionContext) {
 	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
 
-	context.subscriptions.push(vscode.commands.registerCommand('zoterolatex.addCitation',addCitation));
-	context.subscriptions.push(vscode.commands.registerCommand('zoterolatex.openInZotero', openInZotero));
+	context.subscriptions.push(vscode.commands.registerCommand('zoteromarkdown.addCitation',addCitation));
+	context.subscriptions.push(vscode.commands.registerCommand('zoteromarkdown.openInZotero', openInZotero));
 }
 
 // this method is called when your extension is deactivated

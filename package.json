@@ -1,13 +1,13 @@
 {
-	"name": "zoterolatex",
-	"displayName": "Zotero LaTeX",
-	"description": "Zotero LaTeX support",
-	"version": "0.4.1",
+	"name": "zoteromarkdown",
+	"displayName": "Zotero Markdown",
+	"description": "Zotero Markdown",
+	"version": "0.0.1",
 	"license": "MIT",
-	"publisher": "bnavetta",
+	"publisher": "theotheo",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bnavetta/vscode-zotero-latex"
+		"url": "https://github.com/bnavetta/vscode-zotero-markdown"
 	},
 	"engines": {
 		"vscode": "^1.31.0"
@@ -16,43 +16,48 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:zoterolatex.addCitation",
-		"onCommand:zoterolatex.openInZotero"
+		"onCommand:zoteromarkdown.addCitation",
+		"onCommand:zoteromarkdown.openInZotero"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "zoterolatex.addCitation",
+				"command": "zoteromarkdown.addCitation",
 				"title": "Zotero: Add Citation"
 			},
 			{
-				"command": "zoterolatex.openInZotero",
+				"command": "zoteromarkdown.openInZotero",
 				"title": "Zotero: Open in Zotero"
 			}
 		],
 		"menus": {
 			"commandPalette": [
 				{
-					"command": "zoterolatex.addCitation",
-					"when": "editorLangId == 'latex'"
+					"command": "zoteromarkdown.addCitation",
+					"when": "editorLangId == 'markdown'"
 				},
 				{
-					"command": "zoterolatex.openInZotero",
-					"when": "editorLangId == 'latex'"
+					"command": "zoteromarkdown.openInZotero",
+					"when": "editorLangId == 'markdown'"
 				}
 			]
 		},
 		"keybindings": [
 			{
 				"key": "alt+z",
-				"command": "zoterolatex.addCitation",
-				"when": "editorTextFocus && editorLangId == 'latex'"
+				"command": "zoteromarkdown.addCitation",
+				"when": "editorTextFocus && editorLangId == 'markdown'"
+			},
+			{
+				"key": "alt+enter",
+				"command": "zoteromarkdown.openInZotero",
+				"when": "editorTextFocus && editorLangId == 'markdown'"
 			}
 		],
 		"configuration": {
 			"type": "object",
-			"title": "Zotero LaTeX",
+			"title": "Zotero markdown",
 			"properties": {
 				"zotero.serverUrl": {
 					"type": "string",
@@ -64,7 +69,7 @@
 					"type": "string",
 					"default": "autocite",
 					"scope": "window",
-					"description": "LaTeX command to use for citations"
+					"description": "markdown command to use for citations"
 				},
 				"zotero.minimizeAfterPicking": {
 					"type": "boolean",
@@ -95,9 +100,8 @@
 		"tslib": "^1.10.0",
 		"tslint": "^5.18.0",
 		"typescript": "^3.5.2",
-		"vscode": "^1.1.35"
-	},
-	"dependencies": {
-		"got": "^9.6.0"
+		"vscode": "^1.1.35",
+		"got": "^9.6.0",
+		"vsce": "^1.83.0"
 	}
 }

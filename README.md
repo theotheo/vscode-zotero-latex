@@ -1,9 +1,8 @@
-# Archived
+# Rewrite
 
-The functionality here has been merged into the
-[LaTeX Utilities](https://github.com/tecosaur/LaTeX-Utilities) extension.
+The package is totally based on https://github.com/bnavetta/vscode-zotero-latex 
 
-# Zotero LaTeX extension
+# Zotero Markdown extension
 
 This is a VS Code extension for using [Zotero](https://www.zotero.org/) with the
 [Better BibTeX](https://retorque.re/zotero-better-bibtex) extension.
@@ -11,15 +10,14 @@ This is a VS Code extension for using [Zotero](https://www.zotero.org/) with the
 ## Features
 
 The main feature of this extension is a command to insert citations from Zotero (Cite As You Write).
-In a LaTeX file, use `Alt-Z` and pick your source. A citation will automatically be inserted
+In a Markdown file, use `Alt-Z` and pick your source. A citation will automatically be inserted
 at the current cursor. This can use either Zotero's own UI or a dialog within VS Code.
 
 If you have a citation key selected, you can jump to it in Zotero with the `Zotero: Open in Zotero` command.
 
 ## Requirements
 
-You need to have Zotero installed, along with the Better BibTex extension. You'll probably also want
-some kind of LaTeX editor extension installed, such as [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
+You need to have Zotero installed, along with the Better BibTex extension. 
 
 ## Usage
 
